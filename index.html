@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://jasonbai008.github.io/ming/favicon.png" type="image/x-icon">
+    <title>明朝那些事儿</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ECF0F1;
+        }
+
+        .flip-container {
+            perspective: 1000px;
+            width: 300px;
+            height: 500px;
+        }
+
+        .flipper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            font-family: cursive;
+        }
+
+        .front,
+        .back {
+            color: #473624;
+            letter-spacing: 2px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.4);
+            box-sizing: border-box;
+            padding: 20px;
+            background: url(https://www.mingchaonaxieshier.com/wp-content/themes/mingchao/images/bg_c.jpg);
+            background-size: 100%;
+        }
+
+        .front {
+            z-index: 2;
+        }
+
+        .front img {
+            width: 80%;
+        }
+
+        .back {
+            flex-direction: column;
+            transform: rotateY(180deg);
+        }
+
+        .back:hover {
+            cursor: pointer;
+        }
+
+        .back p:first-child {
+            font-size: 24px;
+            margin-top: -8px;
+            margin-bottom: -10px;
+        }
+
+        .back p:nth-of-type(2) {
+            line-height: 1.5;
+        }
+
+        .flip-container:hover .flipper {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flip-container">
+        <div class="flipper">
+            <div class="front">
+                <img src="https://www.mingchaonaxieshier.com/wp-content/themes/mingchao/images/logo.png" alt="">
+            </div>
+            <div class="back" onclick="window.open(`https://www.mingchaonaxieshier.com/`)">
+                <p>成功只有一个：</p>
+                <p>按照自己的方式<br>去度过人生。</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
